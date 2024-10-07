@@ -1,0 +1,113 @@
+body {
+    background-color: #181818; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif; /* Modern font */
+    overflow: hidden; /* Hide scrollbars */
+}
+
+.calculator {
+    background-color: #282828; /* Darker gray */
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 350px;
+}
+
+.display {
+    background-color: #383838; /* Even darker */
+    border-radius: 10px;
+    padding: 15px;
+    text-align: right;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff; /* White text */
+    overflow: hidden; /* Prevent text overflow */
+}
+
+.previous-operand {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.current-operand {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+button {
+    background-color: #484848; /* Dark gray button */
+    border: none;
+    border-radius: 10px;
+    padding: 18px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    color: #fff; /* White text */
+}
+
+button:hover {
+    background-color: #585858; /* Darker gray on hover */
+    transform: scale(1.05); /* Zoom on hover */
+}
+
+.operator {
+    background-color: #ff9800; /* Orange operator */
+    color: #fff;
+}
+
+.operator:hover {
+    background-color: #ff8000; /* Darker orange */
+}
+
+.clear {
+    background-color: #ff5733; /* Red clear button */
+    color: #fff;
+}
+
+.clear:hover {
+    background-color: #ff451f; /* Darker red */
+}
+
+.number {
+    background-color: #484848; /* Dark gray number */
+    color: #fff;
+}
+
+.number:hover {
+    background-color: #585858; /* Darker gray on hover */
+}
+
+.equals {
+    background-color: #4CAF50; /* Green equals button */
+    color: #fff;
+}
+
+.equals:hover {
+    background-color: #3e8e41; /* Darker green */
+}
+
+/* Animation for display */
+.display {
+    animation: displayAnimation 0.5s ease-in-out;
+}
+
+@keyframes displayAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
